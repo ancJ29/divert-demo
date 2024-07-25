@@ -46,7 +46,7 @@ export default function ResultPage({
                 className="w-36 h-[9rem] bg-cover bg-center rounded-lg"
                 style={{ backgroundImage: isDirectPicture
                   ? `url(${imageName})`
-                  : `url(../public/images/${imageName}.jpg)`
+                  : `url(../images/${imageName}.jpg)`
                 }}
               />
             </Center>
@@ -72,7 +72,7 @@ export default function ResultPage({
 
   return (
     <>
-      <Container className="flex flex-col relative items-center h-screen w-full pt-8 pb-28">
+      <Container className="flex flex-col relative items-center min-h-svh w-full pt-8 pb-28">
         { (isMatched || isDirectPicture) && <>
             <Center className="h-24 w-24 bg-green-800 rounded-full text-white p-4">
               <IconPhotoCheck className="h-12 w-12" />
@@ -85,7 +85,7 @@ export default function ResultPage({
                     className="w-36 min-h-[9rem] h-full bg-cover bg-center rounded-l-lg"
                     style={{ backgroundImage: isDirectPicture
                       ? `url(${imageName})`
-                      : `url(../public/images/${imageName}.jpg)`
+                      : `url(../images/${imageName}.jpg)`
                     }}
                   />
               }

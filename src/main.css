@@ -16,7 +16,7 @@
 .home-container-bg-img {
   @apply absolute inset-0 w-full h-full opacity-70;
   @apply bg-cover bg-center;
-  background-image: url('../public/images/digital-security-door-lock-01.jpg');
+  background-image: url('../images/digital-security-door-lock-01.jpg');
   z-index: -1;
 }
 

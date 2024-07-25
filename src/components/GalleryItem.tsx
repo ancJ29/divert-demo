@@ -8,7 +8,7 @@ export default function GalleryItem({
   return (<div onClick={() => onChooseImage(imageName)}>
     <img
       className="h-auto max-w-full rounded-lg border border-b rounded-md"
-      src={`../public/images/${imageName}.jpg`}
+      src={`../images/${imageName}.jpg`}
       alt={imageName}
     />
   </div>)
