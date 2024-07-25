@@ -1,0 +1,65 @@
+@layer tailwind {
+  @tailwind base;
+}
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  @apply flex items-center justify-center w-full;
+}
+
+.master-container {
+  @apply h-screen w-full;
+  max-width: 768px;
+}
+
+.home-container-bg-img {
+  @apply absolute inset-0 w-full h-full opacity-70;
+  @apply bg-cover bg-center;
+  background-image: url('../public/images/digital-security-door-lock-01.jpg');
+  z-index: -1;
+}
+
+.home-container-bg-color {
+  @apply absolute inset-0 w-full h-full opacity-70;
+  @apply bg-cover bg-center bg-blue-800;
+  z-index: -1;
+}
+
+.photo-button {
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  position: absolute;
+
+  .circle {
+    position: absolute;
+    top: 12%;
+    left: 12%;
+    bottom: 12%;
+    right: 12%;
+    border-radius: 100%;
+    background-color: #ffffff;
+    opacity: 1;
+  }
+  .ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    border-radius: 100%;
+    border: 0.5em solid #ffffff;
+    opacity: 0.8;
+  }
+}
+
+#video-stream {
+  video {
+    width: 100%;
+  }
+}

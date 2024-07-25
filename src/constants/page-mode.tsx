@@ -1,0 +1,22 @@
+const HOME_PAGE = 'HOME'
+const CAMERA_PAGE = 'CAMERA'
+const GALLERY_PAGE = 'GALLERY'
+const CHECKING_PAGE = 'CHECKING'
+const RESULT_PAGE = 'RESULT'
+
+const PAGE_MODES: Record<string, number> = {
+  [HOME_PAGE]: 1,
+  [CAMERA_PAGE]: 2,
+  [GALLERY_PAGE]: 3,
+  [CHECKING_PAGE]: 4,
+  [RESULT_PAGE]: 5,
+}
+
+export {
+  HOME_PAGE,
+  CAMERA_PAGE,
+  GALLERY_PAGE,
+  CHECKING_PAGE,
+  RESULT_PAGE,
+  PAGE_MODES
+}

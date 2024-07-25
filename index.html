@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Divert Inc. AI Camera</title>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Stardos+Stencil:wght@400;700&display=swap');
+
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .logo-pre-loading {
+        font-size: 3rem;
+        line-height: 1;
+        letter-spacing: 0.05em;
+        font-family: "Stardos Stencil", system-ui;
+        font-weight: 700;
+        font-style: normal;
+        opacity: 0;
+        animation: fadeInLogoPreLoading 3s ease-in-out forwards;
+      }
+
+      .pre-loading-container {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+        --tw-bg-opacity: 1;
+        background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+      }
+
+      @keyframes fadeInLogoPreLoading {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body class="overflow-hidden">
+    <div id="preLoadingContainer" class="pre-loading-container">
+      <span class="logo-pre-loading">
+        DIVERT Inc.
+      </span>
+    </div>
+    <div id="root"></div>
+    <div class="modal-container"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
