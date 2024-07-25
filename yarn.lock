@@ -224,11 +224,6 @@
     "@babel/helper-validator-identifier" "^7.24.7"
     to-fast-properties "^2.0.0"
 
-"@blackbox-vision/use-torch-light@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@blackbox-vision/use-torch-light/-/use-torch-light-0.0.2.tgz#0f5c4681a5807c278de1a042070901ce17a3df9a"
-  integrity sha512-yvmzv2O43JpgL1F1DZRvGF79lfPg0zreV55V3uLXsXfnhC/HG5BXStIb70uZ/1XclIrhtyhmO0uLG+HIIsUPKQ==
-
 "@esbuild/aix-ppc64@0.21.5":
   version "0.21.5"
   resolved "https://registry.yarnpkg.com/@esbuild/aix-ppc64/-/aix-ppc64-0.21.5.tgz#c7184a326533fcdf1b8ee0733e21c713b975575f"

@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@blackbox-vision/use-torch-light": "^0.0.2",
     "@mantine/core": "^7.11.2",
     "@mantine/hooks": "^7.11.2",
     "@tabler/icons-react": "^3.11.0",

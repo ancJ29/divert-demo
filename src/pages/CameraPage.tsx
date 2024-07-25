@@ -1,12 +1,11 @@
 import { Container } from "@mantine/core";
 import ContainerWithBgImg from "../components/ContainerWithBgImg";
-import { IconBolt, IconBoltOff, IconCircleX, IconLayout2, IconRotateDot } from "@tabler/icons-react";
+import { IconCircleX, IconLayout2, IconRotateDot } from "@tabler/icons-react";
 import { useCallback, useRef, useState } from "react";
 import Webcam from "react-webcam";
 import { useWindowSize } from "@uidotdev/usehooks";
 import { FACING_MODE_ENVIRONMENT, FACING_MODE_USER } from "../constants/camera-mode";
-import { useTorchLight } from "@blackbox-vision/use-torch-light";
-import { isAndroid, isChrome, isMobile } from "react-device-detect";
+import { isMobile, isSafari } from "react-device-detect";
 
 export default function CameraPage({
   onBackHome,
@@ -27,22 +26,20 @@ export default function CameraPage({
     ? (isLandscape ? size.width / size.height : size.height / size.width)
     : 1;
 
-  const [isFlashActive, setIsFlashActive] = useTorchLight(webcamRef.current);
-
   const capture = useCallback(() => {
     const imageSrc = webcamRef.current && webcamRef.current.getScreenshot();
     onCapturePicture(imageSrc);
   }, [webcamRef, onCapturePicture]);
 
-  const renderedFlashButton = () => {
+  /* const renderedFlashButton = () => {
     return isFlashActive
     ? <IconBolt className="h-12 w-12" onClick={() => toggleFlash()} />
     : <IconBoltOff className="h-12 w-12" onClick={() => toggleFlash()} />
   }
 
   const toggleFlash = () => {
-    setIsFlashActive();
-  }
+    setIsFlashActive(true);
+  }*/
 
   const switchCameraHandler = useCallback(() => {
     setFacingMode(
@@ -66,7 +63,7 @@ export default function CameraPage({
         }
       </div>
 
-      <Container className="flex flex-col justify-between min-h-svh w-full z-20">
+      <Container className={`flex flex-col justify-between min-h-svh w-full z-20 pt-2 ${ isMobile && isSafari ? 'pb-8' : 'pb-4'}`}>
         <Container px={0} className="flex items-center justify-between w-full py-4 text-white">
           <IconCircleX className="h-12 w-12" onClick={onBackHome} />
           <IconRotateDot className="h-12 w-12" onClick={() => switchCameraHandler()} />
@@ -78,9 +75,10 @@ export default function CameraPage({
             <div className="ring"></div>
           </div>
           {
-            isAndroid && isChrome && isMobile
+            <span className="h-12 w-12" />
+            /* isAndroid && isChrome && isMobile
               ? renderedFlashButton()
-              : <span className="h-12 w-12" />
+              : <span className="h-12 w-12" /> */
           }
         </Container>
       </Container>
