@@ -10,7 +10,7 @@ export default function HomePage({
 }) {
   const renderedButtons = [
     { label: 'Take Picture', pageMode: CAMERA_PAGE, variant: "filled" },
-    { label: 'Choode Picture', pageMode: GALLERY_PAGE, variant: "default" },
+    { label: 'Choose Picture', pageMode: GALLERY_PAGE, variant: "default" },
   ].map((el) => {
     return (
       <Button

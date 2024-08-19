@@ -15,13 +15,13 @@ export default function GalleryPage({
 }) {
   const [currentPage, setCurrentPage] = useState(0);
   const limit = 12;
-  const totalRecords = 19; // MEMO: hardcore for prototype
+  const totalRecords = 30; // MEMO: hardcore for prototype
   const totalPages = Math.ceil(totalRecords/limit);
 
   const renderImages = (rowIndex: number) => {
     return [...Array(3)].map((_, index: number) => {
       const order = ((index+1)+(rowIndex*3))+(currentPage*limit);
-      const imageName = `digital-security-door-lock-${String(order).padStart(2, '0')}`;
+      const imageName = `product-${String(order%5 + 1).padStart(2, '0')}`;
       return order <= totalRecords
         ? <GalleryItem
             key={generateUUID()}
